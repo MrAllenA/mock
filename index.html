@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneSignal Integration Example</title>
+  
+  <!-- OneSignal SDK -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "c54300e9-f710-473f-aa5b-952228a8b147",
+        safari_web_id: "web.onesignal.auto.3a850f03-75f9-40a0-acb5-2bc8b318c823",
+        notifyButton: {
+          enable: true,
+        },
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Welcome to OneSignal Integration Example</h1>
+  <p>Click the notification button to subscribe to push notifications.</p>
+</body>
+</html>
